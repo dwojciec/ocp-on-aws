@@ -8,7 +8,7 @@ The repository contains Vagrantfile to create a VM "console" to perform the depl
 ###To perform an installation of OCP on AWS you need:
 
 -  AWS account-  RedHat account and openshift subscription
--  AWS Route53 domain - example : sysdeseng.com-  Github account : Authentication for the reference architecture deployment ishandled by GitHub OAuth.
+-  AWS Route53 domain you purchased - example : sysdeseng.com-  Github account : Authentication for the reference architecture deployment ishandled by GitHub OAuth.
 
 
 ###Install on your machine :

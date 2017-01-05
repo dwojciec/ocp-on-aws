@@ -80,7 +80,7 @@ Now we are ready to create the VM
 $ vagrant up 
 ```
 
-After 10 minutes you will have a RHEL VM 7.2 prepared to perform the Reference Architecture of OCP on AWS. See [here an output file example] (https://raw.githubusercontent.com/dwojciec/ocp-on-aws/master/doc/vagrant-output.txt)  of `vagrant up` to compare.
+After 10 minutes (if the gwhorley/rhel72-x86_64 box we are using is already downloaded) you will have a RHEL VM 7.2 prepared to perform the Reference Architecture of OCP on AWS. See [here an output file example] (https://raw.githubusercontent.com/dwojciec/ocp-on-aws/master/doc/vagrant-output.txt)  of `vagrant up` to compare.
 
 Performing the OCP installation on AWS
 

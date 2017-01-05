@@ -1,0 +1,804 @@
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'gwhorley/rhel72-x86_64'...
+==> default: Matching MAC address for NAT networking...
+==> default: Setting the name of the VM: aws_client
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Remote connection disconnect. Retrying...
+    default: 
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default: 
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if it's present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Registering box with vagrant-registration...
+[default] GuestAdditions versions on your host (5.1.6) and guest (5.0.20) do not match.
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Package kernel-devel-3.10.0-327.el7.x86_64 already installed and latest version
+Package bzip2-1.0.6-13.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package binutils.x86_64 0:2.23.52.0.1-55.el7 will be updated
+---> Package binutils.x86_64 0:2.25.1-22.base.el7 will be an update
+---> Package gcc.x86_64 0:4.8.5-4.el7 will be updated
+--> Processing Dependency: gcc = 4.8.5-4.el7 for package: gcc-gfortran-4.8.5-4.el7.x86_64
+--> Processing Dependency: gcc = 4.8.5-4.el7 for package: gcc-c++-4.8.5-4.el7.x86_64
+--> Processing Dependency: gcc = 4.8.5-4.el7 for package: libquadmath-devel-4.8.5-4.el7.x86_64
+---> Package gcc.x86_64 0:4.8.5-11.el7 will be an update
+--> Processing Dependency: cpp = 4.8.5-11.el7 for package: gcc-4.8.5-11.el7.x86_64
+--> Processing Dependency: libgomp = 4.8.5-11.el7 for package: gcc-4.8.5-11.el7.x86_64
+--> Processing Dependency: libgcc >= 4.8.5-11.el7 for package: gcc-4.8.5-11.el7.x86_64
+---> Package make.x86_64 1:3.82-21.el7 will be updated
+---> Package make.x86_64 1:3.82-23.el7 will be an update
+---> Package perl.x86_64 4:5.16.3-286.el7 will be updated
+---> Package perl.x86_64 4:5.16.3-291.el7 will be an update
+--> Processing Dependency: perl-libs = 4:5.16.3-291.el7 for package: 4:perl-5.16.3-291.el7.x86_64
+--> Running transaction check
+---> Package cpp.x86_64 0:4.8.5-4.el7 will be updated
+---> Package cpp.x86_64 0:4.8.5-11.el7 will be an update
+---> Package gcc-c++.x86_64 0:4.8.5-4.el7 will be updated
+---> Package gcc-c++.x86_64 0:4.8.5-11.el7 will be an update
+--> Processing Dependency: libstdc++ = 4.8.5-11.el7 for package: gcc-c++-4.8.5-11.el7.x86_64
+--> Processing Dependency: libstdc++-devel = 4.8.5-11.el7 for package: gcc-c++-4.8.5-11.el7.x86_64
+---> Package gcc-gfortran.x86_64 0:4.8.5-4.el7 will be updated
+---> Package gcc-gfortran.x86_64 0:4.8.5-11.el7 will be an update
+--> Processing Dependency: libgfortran = 4.8.5-11.el7 for package: gcc-gfortran-4.8.5-11.el7.x86_64
+--> Processing Dependency: libquadmath = 4.8.5-11.el7 for package: gcc-gfortran-4.8.5-11.el7.x86_64
+---> Package libgcc.x86_64 0:4.8.5-4.el7 will be updated
+---> Package libgcc.x86_64 0:4.8.5-11.el7 will be an update
+---> Package libgomp.x86_64 0:4.8.5-4.el7 will be updated
+---> Package libgomp.x86_64 0:4.8.5-11.el7 will be an update
+---> Package libquadmath-devel.x86_64 0:4.8.5-4.el7 will be updated
+---> Package libquadmath-devel.x86_64 0:4.8.5-11.el7 will be an update
+---> Package perl-libs.x86_64 4:5.16.3-286.el7 will be updated
+---> Package perl-libs.x86_64 4:5.16.3-291.el7 will be an update
+--> Running transaction check
+---> Package libgfortran.x86_64 0:4.8.5-4.el7 will be updated
+---> Package libgfortran.x86_64 0:4.8.5-11.el7 will be an update
+---> Package libquadmath.x86_64 0:4.8.5-4.el7 will be updated
+---> Package libquadmath.x86_64 0:4.8.5-11.el7 will be an update
+---> Package libstdc++.x86_64 0:4.8.5-4.el7 will be updated
+---> Package libstdc++.x86_64 0:4.8.5-11.el7 will be an update
+---> Package libstdc++-devel.x86_64 0:4.8.5-4.el7 will be updated
+---> Package libstdc++-devel.x86_64 0:4.8.5-11.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package            Arch    Version               Repository               Size
+================================================================================
+Updating:
+ binutils           x86_64  2.25.1-22.base.el7    rhel-7-server-htb-rpms  5.4 M
+ gcc                x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms   16 M
+ make               x86_64  1:3.82-23.el7         rhel-7-server-htb-rpms  421 k
+ perl               x86_64  4:5.16.3-291.el7      rhel-7-server-htb-rpms  8.0 M
+Updating for dependencies:
+ cpp                x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms  5.9 M
+ gcc-c++            x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms  7.2 M
+ gcc-gfortran       x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms  6.7 M
+ libgcc             x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms   97 k
+ libgfortran        x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms  295 k
+ libgomp            x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms  152 k
+ libquadmath        x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms  184 k
+ libquadmath-devel  x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms   47 k
+ libstdc++          x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms  300 k
+ libstdc++-devel    x86_64  4.8.5-11.el7          rhel-7-server-htb-rpms  1.5 M
+ perl-libs          x86_64  4:5.16.3-291.el7      rhel-7-server-htb-rpms  688 k
+
+Transaction Summary
+================================================================================
+Upgrade  4 Packages (+11 Dependent packages)
+
+Total download size: 53 M
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+Public key for binutils-2.25.1-22.base.el7.x86_64.rpm is not installed
+warning: /var/cache/yum/x86_64/7Server/rhel-7-server-htb-rpms/packages/binutils-2.25.1-22.base.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
+--------------------------------------------------------------------------------
+Total                                              1.8 MB/s |  53 MB  00:29     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-beta
+Importing GPG key 0xF21541EB:
+ Userid     : "Red Hat, Inc. (beta key 2) <security@redhat.com>"
+ Fingerprint: b08b 659e e86a f623 bc90 e8db 938a 80ca f215 41eb
+ Package    : redhat-release-server-7.2-9.el7.x86_64 (@anaconda/7.2)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-beta
+Importing GPG key 0x897DA07A:
+ Userid     : "Red Hat, Inc. (Beta Test Software) <rawhide@redhat.com>"
+ Fingerprint: 17e8 543d 1d4a a5fa a96a 7e9f fd37 2689 897d a07a
+ Package    : redhat-release-server-7.2-9.el7.x86_64 (@anaconda/7.2)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-beta
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+Importing GPG key 0xFD431D51:
+ Userid     : "Red Hat, Inc. (release key 2) <security@redhat.com>"
+ Fingerprint: 567e 347a d004 4ade 55ba 8a5f 199e 2f91 fd43 1d51
+ Package    : redhat-release-server-7.2-9.el7.x86_64 (@anaconda/7.2)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+Importing GPG key 0x2FA658E0:
+ Userid     : "Red Hat, Inc. (auxiliary key) <security@redhat.com>"
+ Fingerprint: 43a6 e49c 4a38 f4be 9abf 2a53 4568 9c88 2fa6 58e0
+ Package    : redhat-release-server-7.2-9.el7.x86_64 (@anaconda/7.2)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : libgcc-4.8.5-11.el7.x86_64                                  1/30 
+  Updating   : libquadmath-4.8.5-11.el7.x86_64                             2/30 
+  Updating   : libstdc++-4.8.5-11.el7.x86_64                               3/30 
+  Updating   : libstdc++-devel-4.8.5-11.el7.x86_64                         4/30 
+  Updating   : libgfortran-4.8.5-11.el7.x86_64                             5/30 
+  Updating   : binutils-2.25.1-22.base.el7.x86_64                          6/30 
+  Updating   : 4:perl-libs-5.16.3-291.el7.x86_64                           7/30 
+  Updating   : 4:perl-5.16.3-291.el7.x86_64                                8/30 
+  Updating   : libgomp-4.8.5-11.el7.x86_64                                 9/30 
+  Updating   : cpp-4.8.5-11.el7.x86_64                                    10/30 
+  Updating   : gcc-4.8.5-11.el7.x86_64                                    11/30 
+  Updating   : libquadmath-devel-4.8.5-11.el7.x86_64                      12/30 
+  Updating   : gcc-gfortran-4.8.5-11.el7.x86_64                           13/30 
+  Updating   : gcc-c++-4.8.5-11.el7.x86_64                                14/30 
+  Updating   : 1:make-3.82-23.el7.x86_64                                  15/30 
+  Cleanup    : gcc-gfortran-4.8.5-4.el7.x86_64                            16/30 
+  Cleanup    : gcc-c++-4.8.5-4.el7.x86_64                                 17/30 
+  Cleanup    : libquadmath-devel-4.8.5-4.el7.x86_64                       18/30 
+  Cleanup    : gcc-4.8.5-4.el7.x86_64                                     19/30 
+  Cleanup    : libgfortran-4.8.5-4.el7.x86_64                             20/30 
+  Cleanup    : libstdc++-devel-4.8.5-4.el7.x86_64                         21/30 
+  Cleanup    : libstdc++-4.8.5-4.el7.x86_64                               22/30 
+  Cleanup    : 4:perl-5.16.3-286.el7.x86_64                               23/30 
+  Cleanup    : 4:perl-libs-5.16.3-286.el7.x86_64                          24/30 
+  Cleanup    : libgcc-4.8.5-4.el7.x86_64                                  25/30 
+  Cleanup    : libquadmath-4.8.5-4.el7.x86_64                             26/30 
+  Cleanup    : binutils-2.23.52.0.1-55.el7.x86_64                         27/30 
+  Cleanup    : cpp-4.8.5-4.el7.x86_64                                     28/30 
+  Cleanup    : libgomp-4.8.5-4.el7.x86_64                                 29/30 
+  Cleanup    : 1:make-3.82-21.el7.x86_64                                  30/30 
+  Verifying  : gcc-c++-4.8.5-11.el7.x86_64                                 1/30 
+  Verifying  : libquadmath-4.8.5-11.el7.x86_64                             2/30 
+  Verifying  : cpp-4.8.5-11.el7.x86_64                                     3/30 
+  Verifying  : binutils-2.25.1-22.base.el7.x86_64                          4/30 
+  Verifying  : libgfortran-4.8.5-11.el7.x86_64                             5/30 
+  Verifying  : libquadmath-devel-4.8.5-11.el7.x86_64                       6/30 
+  Verifying  : 1:make-3.82-23.el7.x86_64                                   7/30 
+  Verifying  : 4:perl-libs-5.16.3-291.el7.x86_64                           8/30 
+  Verifying  : libstdc++-4.8.5-11.el7.x86_64                               9/30 
+  Verifying  : libgcc-4.8.5-11.el7.x86_64                                 10/30 
+  Verifying  : 4:perl-5.16.3-291.el7.x86_64                               11/30 
+  Verifying  : gcc-gfortran-4.8.5-11.el7.x86_64                           12/30 
+  Verifying  : libgomp-4.8.5-11.el7.x86_64                                13/30 
+  Verifying  : gcc-4.8.5-11.el7.x86_64                                    14/30 
+  Verifying  : libstdc++-devel-4.8.5-11.el7.x86_64                        15/30 
+  Verifying  : gcc-4.8.5-4.el7.x86_64                                     16/30 
+  Verifying  : gcc-c++-4.8.5-4.el7.x86_64                                 17/30 
+  Verifying  : 4:perl-libs-5.16.3-286.el7.x86_64                          18/30 
+  Verifying  : libquadmath-4.8.5-4.el7.x86_64                             19/30 
+  Verifying  : 4:perl-5.16.3-286.el7.x86_64                               20/30 
+  Verifying  : libstdc++-4.8.5-4.el7.x86_64                               21/30 
+  Verifying  : libquadmath-devel-4.8.5-4.el7.x86_64                       22/30 
+  Verifying  : libgcc-4.8.5-4.el7.x86_64                                  23/30 
+  Verifying  : libgfortran-4.8.5-4.el7.x86_64                             24/30 
+  Verifying  : gcc-gfortran-4.8.5-4.el7.x86_64                            25/30 
+  Verifying  : libstdc++-devel-4.8.5-4.el7.x86_64                         26/30 
+  Verifying  : cpp-4.8.5-4.el7.x86_64                                     27/30 
+  Verifying  : libgomp-4.8.5-4.el7.x86_64                                 28/30 
+  Verifying  : 1:make-3.82-21.el7.x86_64                                  29/30 
+  Verifying  : binutils-2.23.52.0.1-55.el7.x86_64                         30/30 
+
+Updated:
+  binutils.x86_64 0:2.25.1-22.base.el7       gcc.x86_64 0:4.8.5-11.el7         
+  make.x86_64 1:3.82-23.el7                  perl.x86_64 4:5.16.3-291.el7      
+
+Dependency Updated:
+  cpp.x86_64 0:4.8.5-11.el7            gcc-c++.x86_64 0:4.8.5-11.el7            
+  gcc-gfortran.x86_64 0:4.8.5-11.el7   libgcc.x86_64 0:4.8.5-11.el7             
+  libgfortran.x86_64 0:4.8.5-11.el7    libgomp.x86_64 0:4.8.5-11.el7            
+  libquadmath.x86_64 0:4.8.5-11.el7    libquadmath-devel.x86_64 0:4.8.5-11.el7  
+  libstdc++.x86_64 0:4.8.5-11.el7      libstdc++-devel.x86_64 0:4.8.5-11.el7    
+  perl-libs.x86_64 4:5.16.3-291.el7   
+
+Complete!
+Copy iso file /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso into the box /tmp/VBoxGuestAdditions.iso
+mount: /dev/loop0 is write-protected, mounting read-only
+Installing Virtualbox Guest Additions 5.1.6 - guest version is 5.0.20
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 5.1.6 Guest Additions for Linux...........
+VirtualBox Guest Additions installer
+Removing installed version 5.0.20 of VirtualBox Guest Additions...
+Removing existing VirtualBox non-DKMS kernel modules[  OK  ]
+Copying additional installer modules ...
+Installing additional modules ...
+vboxadd.sh: Building Guest Additions kernel modules.
+vboxadd.sh: You should restart your guest to make sure the new modules are actually used.
+vboxadd.sh: Starting the VirtualBox Guest Additions.
+
+Could not find the X.Org or XFree86 Window System, skipping.
+Got different reports about installed GuestAdditions version:
+Virtualbox on your host claims:   5.0.20
+VBoxService inside the vm claims: 5.1.6
+Going on, assuming VBoxService is correct...
+Got different reports about installed GuestAdditions version:
+Virtualbox on your host claims:   5.0.20
+VBoxService inside the vm claims: 5.1.6
+Going on, assuming VBoxService is correct...
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 5.0.20
+    default: VirtualBox Version: 5.1
+==> default: Setting hostname...
+==> default: Configuring and enabling network interfaces...
+==> default: Automatic installation for Landrush IP not enabled
+==> default: Mounting shared folders...
+    default: /vagrant => /Users/dwojciec/Documents/TEST/ocp-on-aws
+==> default: Setting time zone...
+==> default: Running provisioner: shell...
+    default: Running: /var/folders/ws/3ghtwd8j6dzcp9sg16nkgjyr0000gn/T/vagrant-shell20170105-10723-1tb0o83.sh
+==> default: disable all repositories and enable only the required ones...
+==> default: Repository 'rhel-7-server-optional-rpms' is enabled for this system.
+==> default: Repository 'rhel-7-server-extras-rpms' is enabled for this system.
+==> default: Repository 'rhel-7-server-ose-3.3-rpms' is enabled for this system.
+==> default: Repository 'rhel-7-server-rpms' is enabled for this system.
+==> default: warning: /var/tmp/rpm-tmp.IR4YNU: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+==> default: Retrieving https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+==> default: Preparing...                          ########################################
+==> default: Updating / installing...
+==> default: epel-release-7-8                      ########################################
+==> default: install atomic-openshift-utils,python2-boto,....
+==> default: Loaded plugins: product-id, search-disabled-repos, subscription-manager
+==> default: https://mirror.ibcp.fr/pub/epel/7/x86_64/repodata/repomd.xml: [Errno -1] repomd.xml does not match metalink for epel
+==> default: Trying other mirror.
+==> default: http://epel.mirrors.ovh.net/epel/7/x86_64/repodata/repomd.xml: [Errno -1] repomd.xml does not match metalink for epel
+==> default: Trying other mirror.
+==> default: https://fr.mirror.babylon.network/epel/7/x86_64/repodata/repomd.xml: [Errno -1] repomd.xml does not match metalink for epel
+==> default: Trying other mirror.
+==> default: http://mir01.syntis.net/epel/7/x86_64/repodata/repomd.xml: [Errno -1] repomd.xml does not match metalink for epel
+==> default: Trying other mirror.
+==> default: http://mirrors.ircam.fr/pub/fedora/epel/7/x86_64/repodata/repomd.xml: [Errno -1] repomd.xml does not match metalink for epel
+==> default: Trying other mirror.
+==> default: https://fr2.rpmfind.net/linux/epel/7/x86_64/repodata/repomd.xml: [Errno -1] repomd.xml does not match metalink for epel
+==> default: Trying other mirror.
+==> default: http://mirrors.telianet.dk/epel/7/x86_64/repodata/repomd.xml: [Errno -1] repomd.xml does not match metalink for epel
+==> default: Trying other mirror.
+==> default: http://ftp.acc.umu.se/mirror/fedora/epel/7/x86_64/repodata/repomd.xml: [Errno -1] repomd.xml does not match metalink for epel
+==> default: Trying other mirror.
+==> default: http://mirror.vutbr.cz/epel/7/x86_64/repodata/repomd.xml: [Errno -1] repomd.xml does not match metalink for epel
+==> default: Trying other mirror.
+==> default: http://ftp.colocall.net/pub/epel/7/x86_64/repodata/e8d6d7b7d2331ae44cf2cf212c2532840987e62696720782ae0f32f7b85ba83d-updateinfo.xml.bz2: [Errno 12] Timeout on http://ftp.colocall.net/pub/epel/7/x86_64/repodata/e8d6d7b7d2331ae44cf2cf212c2532840987e62696720782ae0f32f7b85ba83d-updateinfo.xml.bz2: (28, 'Connection timed out after 30004 milliseconds')
+==> default: Trying other mirror.
+==> default: No package ansible-2.2.0.0-3.el7.noarch available.
+==> default: Resolving Dependencies
+==> default: --> Running transaction check
+==> default: ---> Package atomic-openshift-utils.noarch 0:3.3.54-1.git.0.61a1dee.el7 will be installed
+==> default: --> Processing Dependency: openshift-ansible-playbooks >= 3.3.54 for package: atomic-openshift-utils-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: --> Processing Dependency: PyYAML for package: atomic-openshift-utils-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: --> Processing Dependency: python-setuptools for package: atomic-openshift-utils-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: ---> Package git.x86_64 0:1.8.3.1-5.el7 will be updated
+==> default: --> Processing Dependency: git = 1.8.3.1-5.el7 for package: perl-Git-1.8.3.1-5.el7.noarch
+==> default: ---> Package git.x86_64 0:1.8.3.1-6.el7_2.1 will be an update
+==> default: ---> Package python-click.noarch 0:6.3-1.el7 will be installed
+==> default: ---> Package python-httplib2.noarch 0:0.9.1-2.el7aos will be installed
+==> default: ---> Package python-netaddr.noarch 0:0.7.5-7.el7 will be installed
+==> default: ---> Package python2-boto.noarch 0:2.43.0-1.el7 will be installed
+==> default: --> Processing Dependency: python-six >= 1.7 for package: python2-boto-2.43.0-1.el7.noarch
+==> default: --> Processing Dependency: python-rsa for package: python2-boto-2.43.0-1.el7.noarch
+==> default: --> Processing Dependency: python-requests for package: python2-boto-2.43.0-1.el7.noarch
+==> default: ---> Package python2-boto3.noarch 0:1.4.2-1.el7 will be installed
+==> default: --> Processing Dependency: python2-s3transfer >= 0.1.0 for package: python2-boto3-1.4.2-1.el7.noarch
+==> default: --> Processing Dependency: python2-jmespath >= 0.7.1 for package: python2-boto3-1.4.2-1.el7.noarch
+==> default: --> Processing Dependency: python2-botocore >= 1.4.1 for package: python2-boto3-1.4.2-1.el7.noarch
+==> default: --> Processing Dependency: python-futures >= 2.2.0 for package: python2-boto3-1.4.2-1.el7.noarch
+==> default: --> Running transaction check
+==> default: ---> Package PyYAML.x86_64 0:3.10-11.el7 will be installed
+==> default: --> Processing Dependency: libyaml-0.so.2()(64bit) for package: PyYAML-3.10-11.el7.x86_64
+==> default: ---> Package openshift-ansible-playbooks.noarch 0:3.3.54-1.git.0.61a1dee.el7 will be installed
+==> default: --> Processing Dependency: openshift-ansible = 3.3.54 for package: openshift-ansible-playbooks-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: --> Processing Dependency: openshift-ansible-callback-plugins = 3.3.54 for package: openshift-ansible-playbooks-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: --> Processing Dependency: openshift-ansible-filter-plugins = 3.3.54 for package: openshift-ansible-playbooks-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: --> Processing Dependency: openshift-ansible-lookup-plugins = 3.3.54 for package: openshift-ansible-playbooks-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: --> Processing Dependency: openshift-ansible-roles = 3.3.54 for package: openshift-ansible-playbooks-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: --> Processing Dependency: /usr/bin/ansible-playbook for package: openshift-ansible-playbooks-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: ---> Package perl-Git.noarch 0:1.8.3.1-5.el7 will be updated
+==> default: ---> Package perl-Git.noarch 0:1.8.3.1-6.el7_2.1 will be an update
+==> default: ---> Package python-requests.noarch 0:2.6.0-1.el7_1 will be installed
+==> default: --> Processing Dependency: python-chardet >= 2.2.1-1 for package: python-requests-2.6.0-1.el7_1.noarch
+==> default: --> Processing Dependency: python-urllib3 >= 1.10.2-1 for package: python-requests-2.6.0-1.el7_1.noarch
+==> default: ---> Package python-setuptools.noarch 0:17.1.1-3.el7aos will be installed
+==> default: ---> Package python-six.noarch 0:1.9.0-2.el7 will be installed
+==> default: ---> Package python2-botocore.noarch 0:1.4.85-1.el7 will be installed
+==> default: --> Processing Dependency: python-docutils >= 0.10 for package: python2-botocore-1.4.85-1.el7.noarch
+==> default: ---> Package python2-futures.noarch 0:3.0.5-1.el7 will be installed
+==> default: ---> Package python2-jmespath.noarch 0:0.9.0-2.el7 will be installed
+==> default: ---> Package python2-rsa.noarch 0:3.4.1-1.el7 will be installed
+==> default: --> Processing Dependency: python-pyasn1 >= 0.1.3 for package: python2-rsa-3.4.1-1.el7.noarch
+==> default: ---> Package python2-s3transfer.noarch 0:0.1.9-1.el7 will be installed
+==> default: --> Running transaction check
+==> default: ---> Package ansible.noarch 0:2.2.0.0-4.el7 will be installed
+==> default: --> Processing Dependency: sshpass for package: ansible-2.2.0.0-4.el7.noarch
+==> default: --> Processing Dependency: python-paramiko for package: ansible-2.2.0.0-4.el7.noarch
+==> default: --> Processing Dependency: python-keyczar for package: ansible-2.2.0.0-4.el7.noarch
+==> default: --> Processing Dependency: python-jinja2 for package: ansible-2.2.0.0-4.el7.noarch
+==> default: ---> Package libyaml.x86_64 0:0.1.4-11.el7_0 will be installed
+==> default: ---> Package openshift-ansible.noarch 0:3.3.54-1.git.0.61a1dee.el7 will be installed
+==> default: --> Processing Dependency: openshift-ansible-docs = 3.3.54-1.git.0.61a1dee.el7 for package: openshift-ansible-3.3.54-1.git.0.61a1dee.el7.noarch
+==> default: ---> Package openshift-ansible-callback-plugins.noarch 0:3.3.54-1.git.0.61a1dee.el7 will be installed
+==> default: ---> Package openshift-ansible-filter-plugins.noarch 0:3.3.54-1.git.0.61a1dee.el7 will be installed
+==> default: ---> Package openshift-ansible-lookup-plugins.noarch 0:3.3.54-1.git.0.61a1dee.el7 will be installed
+==> default: ---> Package openshift-ansible-roles.noarch 0:3.3.54-1.git.0.61a1dee.el7 will be installed
+==> default: ---> Package python-chardet.noarch 0:2.2.1-1.el7_1 will be installed
+==> default: ---> Package python-docutils.noarch 0:0.11-0.2.20130715svn7687.el7 will be installed
+==> default: --> Processing Dependency: python-imaging for package: python-docutils-0.11-0.2.20130715svn7687.el7.noarch
+==> default: ---> Package python-urllib3.noarch 0:1.10.2-2.el7_1 will be installed
+==> default: --> Processing Dependency: python-backports-ssl_match_hostname for package: python-urllib3-1.10.2-2.el7_1.noarch
+==> default: ---> Package python2-pyasn1.noarch 0:0.1.9-7.el7 will be installed
+==> default: --> Running transaction check
+==> default: ---> Package openshift-ansible-docs.noarch 0:3.3.54-1.git.0.61a1dee.el7 will be installed
+==> default: ---> Package python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7 will be installed
+==> default: --> Processing Dependency: python-backports for package: python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch
+==> default: ---> Package python-jinja2.noarch 0:2.7.2-2.el7 will be installed
+==> default: --> Processing Dependency: python-babel >= 0.8 for package: python-jinja2-2.7.2-2.el7.noarch
+==> default: --> Processing Dependency: python-markupsafe for package: python-jinja2-2.7.2-2.el7.noarch
+==> default: ---> Package python-keyczar.noarch 0:0.71c-2.el7aos will be installed
+==> default: --> Processing Dependency: python-crypto for package: python-keyczar-0.71c-2.el7aos.noarch
+==> default: ---> Package python-pillow.x86_64 0:2.0.0-19.gitd1c6db8.el7 will be installed
+==> default: --> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+==> default: --> Processing Dependency: libtiff.so.5(LIBTIFF_4.0)(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+==> default: --> Processing Dependency: libjpeg.so.62()(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+==> default: --> Processing Dependency: libtiff.so.5()(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+==> default: --> Processing Dependency: libwebp.so.4()(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+==> default: ---> Package python2-paramiko.noarch 0:1.16.1-1.el7 will be installed
+==> default: --> Processing Dependency: python2-ecdsa for package: python2-paramiko-1.16.1-1.el7.noarch
+==> default: ---> Package sshpass.x86_64 0:1.05-5.el7aos will be installed
+==> default: --> Running transaction check
+==> default: ---> Package libjpeg-turbo.x86_64 0:1.2.90-5.el7 will be installed
+==> default: ---> Package libtiff.x86_64 0:4.0.3-25.el7_2 will be installed
+==> default: --> Processing Dependency: libjbig.so.2.0()(64bit) for package: libtiff-4.0.3-25.el7_2.x86_64
+==> default: ---> Package libwebp.x86_64 0:0.3.0-3.el7 will be installed
+==> default: ---> Package python-babel.noarch 0:0.9.6-8.el7 will be installed
+==> default: ---> Package python-backports.x86_64 0:1.0-8.el7 will be installed
+==> default: ---> Package python-markupsafe.x86_64 0:0.11-10.el7 will be installed
+==> default: ---> Package python2-crypto.x86_64 0:2.6.1-10.el7 will be installed
+==> default: --> Processing Dependency: libtomcrypt.so.0()(64bit) for package: python2-crypto-2.6.1-10.el7.x86_64
+==> default: ---> Package python2-ecdsa.noarch 0:0.13-4.el7 will be installed
+==> default: --> Running transaction check
+==> default: ---> Package jbigkit-libs.x86_64 0:2.0-11.el7 will be installed
+==> default: ---> Package libtomcrypt.x86_64 0:1.17-23.el7 will be installed
+==> default: --> Processing Dependency: libtommath >= 0.42.0 for package: libtomcrypt-1.17-23.el7.x86_64
+==> default: --> Processing Dependency: libtommath.so.0()(64bit) for package: libtomcrypt-1.17-23.el7.x86_64
+==> default: --> Running transaction check
+==> default: ---> Package libtommath.x86_64 0:0.42.0-4.el7 will be installed
+==> default: --> Finished Dependency Resolution
+==> default: 
+==> default: Dependencies Resolved
+==> default: 
+==> default: ================================================================================
+==> default:  Package            Arch   Version            Repository                   Size
+==> default: ================================================================================
+==> default: Installing:
+==> default:  atomic-openshift-utils
+==> default:                     noarch 3.3.54-1.git.0.61a1dee.el7
+==> default:                                               rhel-7-server-ose-3.3-rpms  171 k
+==> default:  python-click       noarch 6.3-1.el7          epel                        120 k
+==> default:  python-httplib2    noarch 0.9.1-2.el7aos     rhel-7-server-ose-3.3-rpms  115 k
+==> default:  python-netaddr     noarch 0.7.5-7.el7        rhel-7-server-rpms          983 k
+==> default:  python2-boto       noarch 2.43.0-1.el7       epel                        1.7 M
+==> default:  python2-boto3      noarch 1.4.2-1.el7        epel                        130 k
+==> default: Updating:
+==> default:  git                x86_64 1.8.3.1-6.el7_2.1  rhel-7-server-rpms          4.4 M
+==> default: Installing for dependencies:
+==> default:  PyYAML             x86_64 3.10-11.el7        rhel-7-server-rpms          153 k
+==> default:  ansible            noarch 2.2.0.0-4.el7      epel                        4.6 M
+==> default:  jbigkit-libs       x86_64 2.0-11.el7         rhel-7-server-rpms           46 k
+==> default:  libjpeg-turbo      x86_64 1.2.90-5.el7       rhel-7-server-rpms          134 k
+==> default:  libtiff            x86_64 4.0.3-25.el7_2     rhel-7-server-rpms          169 k
+==> default:  libtomcrypt        x86_64 1.17-23.el7        epel                        224 k
+==> default:  libtommath         x86_64 0.42.0-4.el7       epel                         35 k
+==> default:  libwebp            x86_64 0.3.0-3.el7        rhel-7-server-rpms          170 k
+==> default:  libyaml            x86_64 0.1.4-11.el7_0     rhel-7-server-rpms           55 k
+==> default:  openshift-ansible  noarch 3.3.54-1.git.0.61a1dee.el7
+==> default:                                               rhel-7-server-ose-3.3-rpms  150 k
+==> default:  openshift-ansible-callback-plugins
+==> default:                     noarch 3.3.54-1.git.0.61a1dee.el7
+==> default:                                               rhel-7-server-ose-3.3-rpms  137 k
+==> default:  openshift-ansible-docs
+==> default:                     noarch 3.3.54-1.git.0.61a1dee.el7
+==> default:                                               rhel-7-server-ose-3.3-rpms  146 k
+==> default:  openshift-ansible-filter-plugins
+==> default:                     noarch 3.3.54-1.git.0.61a1dee.el7
+==> default:                                               rhel-7-server-ose-3.3-rpms  157 k
+==> default:  openshift-ansible-lookup-plugins
+==> default:                     noarch 3.3.54-1.git.0.61a1dee.el7
+==> default:                                               rhel-7-server-ose-3.3-rpms  130 k
+==> default:  openshift-ansible-playbooks
+==> default:                     noarch 3.3.54-1.git.0.61a1dee.el7
+==> default:                                               rhel-7-server-ose-3.3-rpms  223 k
+==> default:  openshift-ansible-roles
+==> default:                     noarch 3.3.54-1.git.0.61a1dee.el7
+==> default:                                               rhel-7-server-ose-3.3-rpms  452 k
+==> default:  python-babel       noarch 0.9.6-8.el7        rhel-7-server-rpms          1.4 M
+==> default:  python-backports   x86_64 1.0-8.el7          rhel-7-server-rpms          5.8 k
+==> default:  python-backports-ssl_match_hostname
+==> default:                     noarch 3.4.0.2-4.el7      rhel-7-server-rpms           12 k
+==> default:  python-chardet     noarch 2.2.1-1.el7_1      rhel-7-server-rpms          227 k
+==> default:  python-docutils    noarch 0.11-0.2.20130715svn7687.el7
+==> default:                                               rhel-7-server-optional-rpms 1.5 M
+==> default:  python-jinja2      noarch 2.7.2-2.el7        rhel-7-server-extras-rpms   516 k
+==> default:  python-keyczar     noarch 0.71c-2.el7aos     rhel-7-server-ose-3.3-rpms  218 k
+==> default:  python-markupsafe  x86_64 0.11-10.el7        rhel-7-server-rpms           25 k
+==> default:  python-pillow      x86_64 2.0.0-19.gitd1c6db8.el7
+==> default:                                               rhel-7-server-rpms          438 k
+==> default:  python-requests    noarch 2.6.0-1.el7_1      rhel-7-server-rpms           93 k
+==> default:  python-setuptools  noarch 17.1.1-3.el7aos    rhel-7-server-ose-3.3-rpms  417 k
+==> default:  python-six         noarch 1.9.0-2.el7        rhel-7-server-rpms           29 k
+==> default:  python-urllib3     noarch 1.10.2-2.el7_1     rhel-7-server-rpms          100 k
+==> default:  python2-botocore   noarch 1.4.85-1.el7       epel                        2.0 M
+==> default:  python2-crypto     x86_64 2.6.1-10.el7       epel                        475 k
+==> default:  python2-ecdsa      noarch 0.13-4.el7         epel                         83 k
+==> default:  python2-futures    noarch 3.0.5-1.el7        epel                         26 k
+==> default:  python2-jmespath   noarch 0.9.0-2.el7        rhel-7-server-ose-3.3-rpms   39 k
+==> default:  python2-paramiko   noarch 1.16.1-1.el7       epel                        257 k
+==> default:  python2-pyasn1     noarch 0.1.9-7.el7        rhel-7-server-rpms          100 k
+==> default:  python2-rsa        noarch 3.4.1-1.el7        epel                         67 k
+==> default:  python2-s3transfer noarch 0.1.9-1.el7        epel                         80 k
+==> default:  sshpass            x86_64 1.05-5.el7aos      rhel-7-server-ose-3.3-rpms   21 k
+==> default: Updating for dependencies:
+==> default:  perl-Git           noarch 1.8.3.1-6.el7_2.1  rhel-7-server-rpms           53 k
+==> default: 
+==> default: Transaction Summary
+==> default: ================================================================================
+==> default: Install  6 Packages (+39 Dependent packages)
+==> default: Upgrade  1 Package  (+ 1 Dependent package)
+==> default: 
+==> default: Total download size: 23 M
+==> default: Downloading packages:
+==> default: Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+==> default: Public key for ansible-2.2.0.0-4.el7.noarch.rpm is not installed
+==> default: warning: /var/cache/yum/x86_64/7Server/epel/packages/ansible-2.2.0.0-4.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+==> default: --------------------------------------------------------------------------------
+==> default: Total                                              1.2 MB/s |  23 MB  00:19     
+==> default: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+==> default: Importing GPG key 0x352C64E5:
+==> default:  Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+==> default:  Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+==> default:  Package    : epel-release-7-8.noarch (installed)
+==> default:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+==> default: Running transaction check
+==> default: Running transaction test
+==> default: Transaction test succeeded
+==> default: Running transaction
+==> default: Warning: RPMDB altered outside of yum.
+==> default:   Installing : python-six-1.9.0-2.el7.noarch                               1/49
+==> default:  
+==> default:   Installing : python-setuptools-17.1.1-3.el7aos.noarch                    2/49
+==> default:  
+==> default:   Installing : python2-pyasn1-0.1.9-7.el7.noarch                           3/49
+==> default:  
+==> default:   Installing : python2-jmespath-0.9.0-2.el7.noarch                         4/49
+==> default:  
+==> default:   Installing : libjpeg-turbo-1.2.90-5.el7.x86_64                           5/49
+==> default:  
+==> default:   Installing : python2-futures-3.0.5-1.el7.noarch                          6/49
+==> default:  
+==> default:   Installing : python2-rsa-3.4.1-1.el7.noarch                              7/49
+==> default:  
+==> default:   Installing : python2-ecdsa-0.13-4.el7.noarch                             8/49
+==> default:  
+==> default:   Updating   : git-1.8.3.1-6.el7_2.1.x86_64                                9/49
+==> default:  
+==> default:   Updating   : perl-Git-1.8.3.1-6.el7_2.1.noarch                          10/49
+==> default:  
+==> default:   Installing : libwebp-0.3.0-3.el7.x86_64                                 11/49
+==> default:  
+==> default:   Installing : libtommath-0.42.0-4.el7.x86_64                             12/49
+==> default:  
+==> default:   Installing : libtomcrypt-1.17-23.el7.x86_64                             13/49
+==> default:  
+==> default:   Installing : python2-crypto-2.6.1-10.el7.x86_64                         14/49
+==> default:  
+==> default:   Installing : python-keyczar-0.71c-2.el7aos.noarch                       15/49
+==> default:  
+==> default:   Installing : python2-paramiko-1.16.1-1.el7.noarch                       16/49
+==> default:  
+==> default:   Installing : python-chardet-2.2.1-1.el7_1.noarch                        17/49
+==> default:  
+==> default:   Installing : libyaml-0.1.4-11.el7_0.x86_64                              18/49
+==> default:  
+==> default:   Installing : PyYAML-3.10-11.el7.x86_64                                  19/49
+==> default:  
+==> default:   Installing : python-httplib2-0.9.1-2.el7aos.noarch                      20/49
+==> default:  
+==> default:   Installing : jbigkit-libs-2.0-11.el7.x86_64                             21/49
+==> default:  
+==> default:   Installing : libtiff-4.0.3-25.el7_2.x86_64                              22/49
+==> default:  
+==> default:   Installing : python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64               23/49
+==> default:  
+==> default:   Installing : python-docutils-0.11-0.2.20130715svn7687.el7.noarch        24/49
+==> default:  
+==> default:   Installing : python2-botocore-1.4.85-1.el7.noarch                       25/49
+==> default:  
+==> default:   Installing : python2-s3transfer-0.1.9-1.el7.noarch                      26/49
+==> default:  
+==> default:   Installing : python-backports-1.0-8.el7.x86_64                          27/49
+==> default:  
+==> default:   Installing : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch   28/49
+==> default:  
+==> default:   Installing : python-urllib3-1.10.2-2.el7_1.noarch                       29/49
+==> default:  
+==> default:   Installing : python-requests-2.6.0-1.el7_1.noarch                       30/49
+==> default:  
+==> default:   Installing : python-babel-0.9.6-8.el7.noarch                            31/49
+==> default:  
+==> default:   Installing : python-markupsafe-0.11-10.el7.x86_64                       32/49
+==> default:  
+==> default:   Installing : python-jinja2-2.7.2-2.el7.noarch                           33/49
+==> default:  
+==> default:   Installing : python-click-6.3-1.el7.noarch                              34/49
+==> default:  
+==> default:   Installing : sshpass-1.05-5.el7aos.x86_64                               35/49
+==> default:  
+==> default:   Installing : ansible-2.2.0.0-4.el7.noarch                               36/49
+==> default:  
+==> default:   Installing : openshift-ansible-docs-3.3.54-1.git.0.61a1dee.el7.noarch   37/49
+==> default:  
+==> default:   Installing : openshift-ansible-3.3.54-1.git.0.61a1dee.el7.noarch        38/49
+==> default:  
+==> default:   Installing : openshift-ansible-filter-plugins-3.3.54-1.git.0.61a1dee.   39/49
+==> default:  
+==> default:   Installing : openshift-ansible-callback-plugins-3.3.54-1.git.0.61a1de   40/49
+==> default:  
+==> default:   Installing : openshift-ansible-lookup-plugins-3.3.54-1.git.0.61a1dee.   41/49
+==> default:  
+==> default:   Installing : openshift-ansible-roles-3.3.54-1.git.0.61a1dee.el7.noarc   42/49
+==> default:  
+==> default:   Installing : openshift-ansible-playbooks-3.3.54-1.git.0.61a1dee.el7.n   43/49
+==> default:  
+==> default:   Installing : atomic-openshift-utils-3.3.54-1.git.0.61a1dee.el7.noarch   44/49
+==> default:  
+==> default:   Installing : python2-boto-2.43.0-1.el7.noarch                           45/49
+==> default:  
+==> default:   Installing : python2-boto3-1.4.2-1.el7.noarch                           46/49
+==> default:  
+==> default:   Installing : python-netaddr-0.7.5-7.el7.noarch                          47/49
+==> default:  
+==> default:   Cleanup    : git-1.8.3.1-5.el7.x86_64                                   48/49
+==> default:  
+==> default:   Cleanup    : perl-Git-1.8.3.1-5.el7.noarch                              49/49
+==> default:  
+==> default:   Verifying  : python-docutils-0.11-0.2.20130715svn7687.el7.noarch         1/49
+==> default:  
+==> default:   Verifying  : python-jinja2-2.7.2-2.el7.noarch                            2/49
+==> default:  
+==> default:   Verifying  : sshpass-1.05-5.el7aos.x86_64                                3/49
+==> default:  
+==> default:   Verifying  : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch    4/49
+==> default:  
+==> default:   Verifying  : python2-futures-3.0.5-1.el7.noarch                          5/49
+==> default:  
+==> default:   Verifying  : python2-rsa-3.4.1-1.el7.noarch                              6/49
+==> default:  
+==> default:   Verifying  : libtomcrypt-1.17-23.el7.x86_64                              7/49
+==> default:  
+==> default:   Verifying  : python-setuptools-17.1.1-3.el7aos.noarch                    8/49
+==> default:  
+==> default:   Verifying  : python-click-6.3-1.el7.noarch                               9/49
+==> default:  
+==> default:   Verifying  : openshift-ansible-playbooks-3.3.54-1.git.0.61a1dee.el7.n   10/49
+==> default:  
+==> default:   Verifying  : atomic-openshift-utils-3.3.54-1.git.0.61a1dee.el7.noarch   11/49
+==> default:  
+==> default:   Verifying  : python2-s3transfer-0.1.9-1.el7.noarch                      12/49
+==> default:  
+==> default:   Verifying  : python2-crypto-2.6.1-10.el7.x86_64                         13/49
+==> default:  
+==> default:   Verifying  : python2-boto3-1.4.2-1.el7.noarch                           14/49
+==> default:  
+==> default:   Verifying  : python2-boto-2.43.0-1.el7.noarch                           15/49
+==> default:  
+==> default:   Verifying  : python2-botocore-1.4.85-1.el7.noarch                       16/49
+==> default:  
+==> default:   Verifying  : openshift-ansible-roles-3.3.54-1.git.0.61a1dee.el7.noarc   17/49
+==> default:  
+==> default:   Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                          18/49
+==> default:  
+==> default:   Verifying  : python-six-1.9.0-2.el7.noarch                              19/49
+==> default:  
+==> default:   Verifying  : python2-ecdsa-0.13-4.el7.noarch                            20/49
+==> default:  
+==> default:   Verifying  : python-netaddr-0.7.5-7.el7.noarch                          21/49
+==> default:  
+==> default:   Verifying  : python-markupsafe-0.11-10.el7.x86_64                       22/49
+==> default:  
+==> default:   Verifying  : openshift-ansible-filter-plugins-3.3.54-1.git.0.61a1dee.   23/49
+==> default:  
+==> default:   Verifying  : python-babel-0.9.6-8.el7.noarch                            24/49
+==> default:  
+==> default:   Verifying  : perl-Git-1.8.3.1-6.el7_2.1.noarch                          25/49
+==> default:  
+==> default:   Verifying  : git-1.8.3.1-6.el7_2.1.x86_64                               26/49
+==> default:  
+==> default:   Verifying  : libtiff-4.0.3-25.el7_2.x86_64                              27/49
+==> default:  
+==> default:   Verifying  : python-backports-1.0-8.el7.x86_64                          28/49
+==> default:  
+==> default:   Verifying  : ansible-2.2.0.0-4.el7.noarch                               29/49
+==> default:  
+==> default:   Verifying  : openshift-ansible-3.3.54-1.git.0.61a1dee.el7.noarch        30/49
+==> default:  
+==> default:   Verifying  : python2-jmespath-0.9.0-2.el7.noarch                        31/49
+==> default:  
+==> default:   Verifying  : python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64               32/49
+==> default:  
+==> default:   Verifying  : python-keyczar-0.71c-2.el7aos.noarch                       33/49
+==> default:  
+==> default:   Verifying  : jbigkit-libs-2.0-11.el7.x86_64                             34/49
+==> default:  
+==> default:   Verifying  : python2-paramiko-1.16.1-1.el7.noarch                       35/49
+==> default:  
+==> default:   Verifying  : python-httplib2-0.9.1-2.el7aos.noarch                      36/49
+==> default:  
+==> default:   Verifying  : libyaml-0.1.4-11.el7_0.x86_64                              37/49
+==> default:  
+==> default:   Verifying  : python-requests-2.6.0-1.el7_1.noarch                       38/49
+==> default:  
+==> default:   Verifying  : openshift-ansible-callback-plugins-3.3.54-1.git.0.61a1de   39/49
+==> default:  
+==> default:   Verifying  : openshift-ansible-lookup-plugins-3.3.54-1.git.0.61a1dee.   40/49
+==> default:  
+==> default:   Verifying  : openshift-ansible-docs-3.3.54-1.git.0.61a1dee.el7.noarch   41/49
+==> default:  
+==> default:   Verifying  : python-chardet-2.2.1-1.el7_1.noarch                        42/49
+==> default:  
+==> default:   Verifying  : libtommath-0.42.0-4.el7.x86_64                             43/49
+==> default:  
+==> default:   Verifying  : python2-pyasn1-0.1.9-7.el7.noarch                          44/49
+==> default:  
+==> default:   Verifying  : PyYAML-3.10-11.el7.x86_64                                  45/49
+==> default:  
+==> default:   Verifying  : python-urllib3-1.10.2-2.el7_1.noarch                       46/49
+==> default:  
+==> default:   Verifying  : libwebp-0.3.0-3.el7.x86_64                                 47/49
+==> default:  
+==> default:   Verifying  : git-1.8.3.1-5.el7.x86_64                                   48/49
+==> default:  
+==> default:   Verifying  : perl-Git-1.8.3.1-5.el7.noarch                              49/49
+==> default:  
+==> default: 
+==> default: Installed:
+==> default:   atomic-openshift-utils.noarch 0:3.3.54-1.git.0.61a1dee.el7                    
+==> default:   python-click.noarch 0:6.3-1.el7                                               
+==> default:   python-httplib2.noarch 0:0.9.1-2.el7aos                                       
+==> default:   python-netaddr.noarch 0:0.7.5-7.el7                                           
+==> default:   python2-boto.noarch 0:2.43.0-1.el7                                            
+==> default:   python2-boto3.noarch 0:1.4.2-1.el7                                            
+==> default: 
+==> default: Dependency Installed:
+==> default:   PyYAML.x86_64 0:3.10-11.el7                                                   
+==> default:   ansible.noarch 0:2.2.0.0-4.el7                                                
+==> default:   jbigkit-libs.x86_64 0:2.0-11.el7                                              
+==> default:   libjpeg-turbo.x86_64 0:1.2.90-5.el7                                           
+==> default:   libtiff.x86_64 0:4.0.3-25.el7_2                                               
+==> default:   libtomcrypt.x86_64 0:1.17-23.el7                                              
+==> default:   libtommath.x86_64 0:0.42.0-4.el7                                              
+==> default:   libwebp.x86_64 0:0.3.0-3.el7                                                  
+==> default:   libyaml.x86_64 0:0.1.4-11.el7_0                                               
+==> default:   openshift-ansible.noarch 0:3.3.54-1.git.0.61a1dee.el7                         
+==> default:   openshift-ansible-callback-plugins.noarch 0:3.3.54-1.git.0.61a1dee.el7        
+==> default:   openshift-ansible-docs.noarch 0:3.3.54-1.git.0.61a1dee.el7                    
+==> default:   openshift-ansible-filter-plugins.noarch 0:3.3.54-1.git.0.61a1dee.el7          
+==> default:   openshift-ansible-lookup-plugins.noarch 0:3.3.54-1.git.0.61a1dee.el7          
+==> default:   openshift-ansible-playbooks.noarch 0:3.3.54-1.git.0.61a1dee.el7               
+==> default:   openshift-ansible-roles.noarch 0:3.3.54-1.git.0.61a1dee.el7                   
+==> default:   python-babel.noarch 0:0.9.6-8.el7                                             
+==> default:   python-backports.x86_64 0:1.0-8.el7                                           
+==> default:   python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7                    
+==> default:   python-chardet.noarch 0:2.2.1-1.el7_1                                         
+==> default:   python-docutils.noarch 0:0.11-0.2.20130715svn7687.el7                         
+==> default:   python-jinja2.noarch 0:2.7.2-2.el7                                            
+==> default:   python-keyczar.noarch 0:0.71c-2.el7aos                                        
+==> default:   python-markupsafe.x86_64 0:0.11-10.el7                                        
+==> default:   python-pillow.x86_64 0:2.0.0-19.gitd1c6db8.el7                                
+==> default:   python-requests.noarch 0:2.6.0-1.el7_1                                        
+==> default:   python-setuptools.noarch 0:17.1.1-3.el7aos                                    
+==> default:   python-six.noarch 0:1.9.0-2.el7                                               
+==> default:   python-urllib3.noarch 0:1.10.2-2.el7_1                                        
+==> default:   python2-botocore.noarch 0:1.4.85-1.el7                                        
+==> default:   python2-crypto.x86_64 0:2.6.1-10.el7                                          
+==> default:   python2-ecdsa.noarch 0:0.13-4.el7                                             
+==> default:   python2-futures.noarch 0:3.0.5-1.el7                                          
+==> default:   python2-jmespath.noarch 0:0.9.0-2.el7                                         
+==> default:   python2-paramiko.noarch 0:1.16.1-1.el7                                        
+==> default:   python2-pyasn1.noarch 0:0.1.9-7.el7                                           
+==> default:   python2-rsa.noarch 0:3.4.1-1.el7                                              
+==> default:   python2-s3transfer.noarch 0:0.1.9-1.el7                                       
+==> default:   sshpass.x86_64 0:1.05-5.el7aos                                                
+==> default: 
+==> default: Updated:
+==> default:   git.x86_64 0:1.8.3.1-6.el7_2.1                                                
+==> default: 
+==> default: Dependency Updated:
+==> default:   perl-Git.noarch 0:1.8.3.1-6.el7_2.1                                           
+==> default: 
+==> default: Complete!
+==> default:  install ntp server to avoid to have desync issue with AWS
+==> default: Loaded plugins: product-id, search-disabled-repos, subscription-manager
+==> default: Resolving Dependencies
+==> default: --> Running transaction check
+==> default: ---> Package ntp.x86_64 0:4.2.6p5-25.el7 will be installed
+==> default: --> Processing Dependency: ntpdate = 4.2.6p5-25.el7 for package: ntp-4.2.6p5-25.el7.x86_64
+==> default: --> Processing Dependency: libopts.so.25()(64bit) for package: ntp-4.2.6p5-25.el7.x86_64
+==> default: --> Running transaction check
+==> default: ---> Package autogen-libopts.x86_64 0:5.18-5.el7 will be installed
+==> default: ---> Package ntpdate.x86_64 0:4.2.6p5-25.el7 will be installed
+==> default: --> Finished Dependency Resolution
+==> default: 
+==> default: Dependencies Resolved
+==> default: 
+==> default: ================================================================================
+==> default:  Package             Arch       Version            Repository              Size
+==> default: ================================================================================
+==> default: Installing:
+==> default:  ntp                 x86_64     4.2.6p5-25.el7     rhel-7-server-rpms     546 k
+==> default: Installing for dependencies:
+==> default:  autogen-libopts     x86_64     5.18-5.el7         rhel-7-server-rpms      66 k
+==> default:  ntpdate             x86_64     4.2.6p5-25.el7     rhel-7-server-rpms      85 k
+==> default: 
+==> default: Transaction Summary
+==> default: ================================================================================
+==> default: Install  1 Package (+2 Dependent packages)
+==> default: 
+==> default: Total download size: 697 k
+==> default: Installed size: 1.6 M
+==> default: Downloading packages:
+==> default: --------------------------------------------------------------------------------
+==> default: Total                                              407 kB/s | 697 kB  00:01     
+==> default: Running transaction check
+==> default: Running transaction test
+==> default: Transaction test succeeded
+==> default: Running transaction
+==> default:   Installing : autogen-libopts-5.18-5.el7.x86_64                            1/3
+==> default:  
+==> default:   Installing : ntpdate-4.2.6p5-25.el7.x86_64                                2/3
+==> default:  
+==> default:   Installing : ntp-4.2.6p5-25.el7.x86_64                                    3/3
+==> default:  
+==> default:   Verifying  : ntpdate-4.2.6p5-25.el7.x86_64                                1/3
+==> default:  
+==> default:   Verifying  : autogen-libopts-5.18-5.el7.x86_64                            2/3
+==> default:  
+==> default:   Verifying  : ntp-4.2.6p5-25.el7.x86_64                                    3/3
+==> default:  
+==> default: 
+==> default: Installed:
+==> default:   ntp.x86_64 0:4.2.6p5-25.el7                                                   
+==> default: 
+==> default: Dependency Installed:
+==> default:   autogen-libopts.x86_64 0:5.18-5.el7      ntpdate.x86_64 0:4.2.6p5-25.el7     
+==> default: 
+==> default: Complete!
+==> default: Created symlink from /etc/systemd/system/multi-user.target.wants/ntpd.service to /usr/lib/systemd/system/ntpd.service.
+==> default: Thu Jan  5 14:46:23 CET 2017
+==> default:  create AWS directory...
+==> default:  clone git repo...
+==> default: Cloning into 'openshift-ansible-contrib'...
+==> default: ssh-keygen.. to generate id_rsa files
+==> default: Enter file in which to save the key (/root/.ssh/id_rsa): 
+==> default:  configuring config file
+==> default: domain Route53 : dwojciec.com

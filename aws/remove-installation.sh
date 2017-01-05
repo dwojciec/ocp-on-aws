@@ -6,4 +6,4 @@ if [ "$REPLY" != "yes" ]; then
    exit
 fi
 echo "Destroying Installation on AWS..."
-ansible-playbook -i inventory/aws/hosts -e 'region=$REGION stack_name=openshift-infra ci=true' playbooks/teardown.yaml
+eval $(echo "ansible-playbook -i inventory/aws/hosts -e 'region=$REGION stack_name=openshift-infra ci=true' playbooks/teardown.yaml")

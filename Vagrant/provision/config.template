@@ -1,0 +1,12 @@
+Host bastion
+     Hostname                 bastion.<DOMAIN>
+     StrictHostKeyChecking      no
+     ProxyCommand               none
+     user			ec2-user
+     CheckHostIP                no
+     ForwardAgent               yes
+     IdentityFile               /root/.ssh/id_rsa
+
+Host *.<DOMAIN>
+     ProxyCommand               ssh ec2-user@bastion -W %h:%p
+     IdentityFile               /root/.ssh/id_rsa

@@ -10,7 +10,7 @@ VM_MEMORY = ENV['VM_MEMORY'] || 1024
 DOMAIN = (ENV['DOMAIN'] || 'sysdeseng.com')
 
 # Validate required plugins
-REQUIRED_PLUGINS = %w(vagrant-registration,vagrant-timezone)
+REQUIRED_PLUGINS = %w(vagrant-registration vagrant-timezone)
 errors = []
 
 def message(name)

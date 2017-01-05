@@ -17,8 +17,8 @@ yum -y install atomic-openshift-utils \
                  python-click \
                  python-httplib2
 echo " install ntp server to avoid to have desync issue with AWS"
-yum -y install ntp >dev/null
-systemctl enale ntpd
+yum -y install ntp 
+systemctl enable ntpd
 systemctl start ntpd
 date
 echo " create AWS directory..."

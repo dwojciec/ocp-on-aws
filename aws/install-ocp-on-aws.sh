@@ -6,8 +6,8 @@ echo "./ose-on-aws.py  -v \
         --rhsm-password=$SUB_PASSWORD \
         --rhsm-pool=$SUB_POOLID \
         --master-instance-type=m4.large \
-        --node-instance-type=m4.xlarge \
-        --app-instance-type=m4.xlarge \
+        --node-instance-type=t2.medium \
+        --app-instance-type=t2.medium \
         --region=$REGION \
         --ami=$AMI \
         --create-key=yes \
@@ -28,8 +28,8 @@ echo "deploying OCP on AWS..."
         --rhsm-password=$SUB_PASSWORD \
 	--rhsm-pool=$SUB_POOLID \
 	--master-instance-type=m4.large \
-	--node-instance-type=m4.xlarge \
-	--app-instance-type=m4.xlarge \
+	--node-instance-type=t2.medium \
+	--app-instance-type=t2.medium \
 	--region=$REGION \
 	--ami=$AMI \
 	--create-key=yes \

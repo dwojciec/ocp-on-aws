@@ -7,8 +7,11 @@ The repository contains Vagrantfile to create a VM "console" to perform the depl
 
 ###To perform an installation of OCP on AWS you need:
 
--  AWS account-  RedHat account and openshift subscription
--  AWS Route53 domain you purchased - example : sysdeseng.com-  Github account : Authentication for the reference architecture deployment ishandled by GitHub OAuth.
+-  AWS account
+-  RedHat account and openshift subscription
+-  AWS Route53 domain you purchased - example : sysdeseng.com
+-  Github account : Authentication for the reference architecture deployment is
+handled by GitHub OAuth.
 
 
 ###Install on your machine :
@@ -28,6 +31,7 @@ vagrant-timezone (1.1.0)
 $ vagrant plugin install vagrant-registration
 $ vagrant plugin install vagrant-timezone
 ```
+Run 'init.sh' to validate your environment before starting.
 
 # Getting started
 
@@ -99,7 +103,22 @@ After less than 1 hour you have a Reference Architecture of OCP deployed on AWS 
 
 ## AWS Resources deployed
 
-In the AWS console, check for the following resources:-  3 Master nodes-  2 Infrastructure nodes- 2 Application nodes- 1 Unique VPC with the required components- 8 Security groups- 2 Elastic IPs- 1 NAT Gateway- 1 Key pair- 3 ELBs- 2 IAM roles- 2 IAM Policies- 1 S3 Bucket- 1 IAM user- 1 Zones in Route53
+In the AWS console, check for the following resources:
+
+-  3 Master nodes
+-  2 Infrastructure nodes
+- 2 Application nodes
+- 1 Unique VPC with the required components
+- 8 Security groups
+- 2 Elastic IPs
+- 1 NAT Gateway
+- 1 Key pair
+- 3 ELBs
+- 2 IAM roles
+- 2 IAM Policies
+- 1 S3 Bucket
+- 1 IAM user
+- 1 Zones in Route53
 
 
 # To destroy
@@ -146,4 +165,5 @@ localhost                  : ok=6    changed=3    unreachable=0    failed=0
 # Notes
 [The Reference Architecture OpenShift on Amazon Web Services] (https://github.com/openshift/openshift-ansible-contrib/tree/master/reference-architecture/aws-ansible)
 
-[Deploying OpenShift ContainerPlatform 3 on Amazon Web Services](https://access.redhat.com/articles/2623521)
+[Deploying OpenShift Container
+Platform 3 on Amazon Web Services](https://access.redhat.com/articles/2623521)

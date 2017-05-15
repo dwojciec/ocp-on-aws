@@ -37,10 +37,11 @@ Run 'init.sh' to validate your environment before starting.
 
 ```
 $ mkdir test
-$ cd TEST
+$ cd test
 $ git clone https://github.com/dwojciec/ocp-on-aws.git
 $ cd ocp-on-aws
 ```
+Coy input.env.template to input.env 
 Update the input.env file with all your own values for DOMAIN, REGION, RHSM,etc....
 
 ```

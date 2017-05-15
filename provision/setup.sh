@@ -6,11 +6,13 @@ subscription-manager repos --enable rhel-7-server-optional-rpms
 subscription-manager repos --enable rhel-7-server-ose-3.5-rpms
 subscription-manager repos --enable rhel-7-fast-datapath-rpms
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum-config-manager --disable epel
+# yum-config-manager --disable epel
 echo "install atomic-openshift-utils,python2-boto,...."
-yum -y install atomic-openshift-utils \
+yum -y install ansible atomic-openshift-utils
+yum -y install --enablerepo=epel \
                  python2-boto \
                  python2-boto3 \
+                 pyOpenSSL \
                  git \
                  python-netaddr \
                  python-click \

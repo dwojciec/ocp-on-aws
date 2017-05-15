@@ -3,17 +3,16 @@ sudo -i
 echo "disable all repositories and enable only the required ones..."
 subscription-manager repos --disable="*" > /dev/null
 subscription-manager repos --enable rhel-7-server-optional-rpms
-subscription-manager repos --enable rhel-7-server-extras-rpms
-subscription-manager repos --enable rhel-7-server-ose-3.3-rpms
-subscription-manager repos --enable rhel-7-server-rpms
-rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+subscription-manager repos --enable rhel-7-server-ose-3.5-rpms
+subscription-manager repos --enable rhel-7-fast-datapath-rpms
+yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum-config-manager --disable epel
 echo "install atomic-openshift-utils,python2-boto,...."
 yum -y install atomic-openshift-utils \
                  python2-boto \
-                 git \
-                 ansible-2.2.0.0-3.el7.noarch \
-                 python-netaddr \
                  python2-boto3 \
+                 git \
+                 python-netaddr \
                  python-click \
                  python-httplib2
 echo " install ntp server to avoid to have desync issue with AWS"
